@@ -23,12 +23,5 @@ offset_bottom = 384.0
 theme_override_font_sizes/font_size = 32
 text = "BAŞLA"
 
-[node name="Button" type="Button" parent="CanvasLayer" unique_id=984807849]
-offset_left = 1024.0
-offset_top = 512.0
-offset_right = 1088.0
-offset_bottom = 576.0
-text = "değiş"
-
 [connection signal="pressed" from="CanvasLayer/çıkış" to="." method="_on_çıkış_pressed"]
 [connection signal="pressed" from="CanvasLayer/Başla" to="." method="_on_başla_pressed"]
