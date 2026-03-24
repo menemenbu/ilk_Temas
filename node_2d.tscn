@@ -5,21 +5,30 @@
 [node name="Menu" type="Node2D" unique_id=767815300]
 script = ExtResource("1_wtcfe")
 
-[node name="Başla" type="Button" parent="." unique_id=57719024]
-offset_left = 768.0
-offset_top = 640.0
-offset_right = 1152.0
-offset_bottom = 768.0
-theme_override_font_sizes/font_size = 32
-text = "BAŞLA"
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=771720810]
 
-[node name="çıkış" type="Button" parent="." unique_id=1802247874]
-offset_left = 768.0
-offset_top = 792.0
-offset_right = 1152.0
-offset_bottom = 920.0
+[node name="çıkış" type="Button" parent="CanvasLayer" unique_id=1802247874]
+offset_left = 448.0
+offset_top = 408.0
+offset_right = 704.0
+offset_bottom = 472.0
 theme_override_font_sizes/font_size = 32
 text = "ÇIKIŞ"
 
-[connection signal="pressed" from="Başla" to="." method="_on_başla_pressed"]
-[connection signal="pressed" from="çıkış" to="." method="_on_çıkış_pressed"]
+[node name="Başla" type="Button" parent="CanvasLayer" unique_id=57719024]
+offset_left = 448.0
+offset_top = 320.0
+offset_right = 704.0
+offset_bottom = 384.0
+theme_override_font_sizes/font_size = 32
+text = "BAŞLA"
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=984807849]
+offset_left = 1024.0
+offset_top = 512.0
+offset_right = 1088.0
+offset_bottom = 576.0
+text = "değiş"
+
+[connection signal="pressed" from="CanvasLayer/çıkış" to="." method="_on_çıkış_pressed"]
+[connection signal="pressed" from="CanvasLayer/Başla" to="." method="_on_başla_pressed"]
