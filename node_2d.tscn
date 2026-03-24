@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://sqcsds17hw0c"]
+
+[ext_resource type="Script" uid="uid://2c034kakvh4b" path="res://scripts/menu.gd" id="1_wtcfe"]
+
+[node name="Menu" type="Node2D" unique_id=767815300]
+script = ExtResource("1_wtcfe")
+
+[node name="Başla" type="Button" parent="." unique_id=57719024]
+offset_left = 768.0
+offset_top = 640.0
+offset_right = 1152.0
+offset_bottom = 768.0
+theme_override_font_sizes/font_size = 32
+text = "BAŞLA"
+
+[node name="çıkış" type="Button" parent="." unique_id=1802247874]
+offset_left = 768.0
+offset_top = 792.0
+offset_right = 1152.0
+offset_bottom = 920.0
+theme_override_font_sizes/font_size = 32
+text = "ÇIKIŞ"
+
+[connection signal="pressed" from="Başla" to="." method="_on_başla_pressed"]
+[connection signal="pressed" from="çıkış" to="." method="_on_çıkış_pressed"]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dv3mq4qlil1d0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gcnp0"]
+font_size = 50
+
+[node name="Oyun" type="Node2D" unique_id=56076303]
+
+[node name="Label" type="Label" parent="." unique_id=1123319493]
+offset_left = 723.1626
+offset_top = 417.62384
+offset_right = 1224.0
+offset_bottom = 720.0
+text = "AAAAAAAAAA"
+label_settings = SubResource("LabelSettings_gcnp0")
