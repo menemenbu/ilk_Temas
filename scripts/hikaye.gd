@@ -28,3 +28,4 @@ extends Node
 #Selam,yıllar sonra uzay ajansında işini yeniden kazandın,gerçekten çok şanslı olmalısın.
 #Neyse sen yokken burda bazı  şeyler değişti.Yeni kuralları öğrenmenin vakti geldi diye düşünüyorum.
 #
+#
