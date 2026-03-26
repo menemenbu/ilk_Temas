@@ -14,12 +14,7 @@ func _process(_delta):
 func _on_çıkış_pressed() -> void:
 	get_tree().quit()
 
-func fullscreen():
-	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_WINDOWED:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 func _physics_process(_delta) -> void:
 	if Input.is_action_just_pressed("F11"):
-		fullscreen()
+		Global.fullscreen()

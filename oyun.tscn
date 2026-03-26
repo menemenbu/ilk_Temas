@@ -1,14 +1,82 @@
 [gd_scene format=3 uid="uid://dv3mq4qlil1d0"]
 
+[ext_resource type="Script" uid="uid://3r24otax82dc" path="res://scripts/oyun.gd" id="1_d62lu"]
+[ext_resource type="Texture2D" uid="uid://b4yigukjrq058" path="res://assets/pixil-frame-0 (8).png" id="2_oe8mv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cnnjj"]
+texture = ExtResource("2_oe8mv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j06mm"]
+texture = ExtResource("2_oe8mv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4hrjw"]
+texture = ExtResource("2_oe8mv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2lw7e"]
+texture = ExtResource("2_oe8mv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ljdso"]
+texture = ExtResource("2_oe8mv")
+
 [sub_resource type="LabelSettings" id="LabelSettings_gcnp0"]
 font_size = 50
 
-[node name="Oyun" type="Node2D" unique_id=56076303]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d62lu"]
+bg_color = Color(0, 0, 0, 0.1764706)
 
-[node name="Label" type="Label" parent="." unique_id=1123319493]
+[node name="Oyun" type="Node2D" unique_id=56076303]
+script = ExtResource("1_d62lu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2018477852]
+
+[node name="menü" type="Button" parent="CanvasLayer" unique_id=1735817266]
+offset_left = 1072.0
+offset_top = 8.0
+offset_right = 1144.0
+offset_bottom = 80.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_cnnjj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j06mm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4hrjw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_2lw7e")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ljdso")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1123319493]
 offset_left = 723.1626
 offset_top = 417.62384
 offset_right = 1224.0
 offset_bottom = 720.0
 text = "AAAAAAAAAA"
 label_settings = SubResource("LabelSettings_gcnp0")
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=879897060]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d62lu")
+
+[node name="menü" type="Panel" parent="CanvasLayer/Panel" unique_id=1693071555]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 128.0
+offset_right = 832.0
+offset_bottom = 512.0
+
+[node name="Devam et" type="Button" parent="CanvasLayer/Panel/menü" unique_id=1390634406]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 272.0
+offset_right = 200.0
+offset_bottom = 344.0
+text = "Devam Et"
+
+[node name="Don" type="Button" parent="CanvasLayer/Panel/menü" unique_id=612988857]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 272.0
+offset_right = 456.0
+offset_bottom = 344.0
+text = "Menüye Dön"
+
+[connection signal="pressed" from="CanvasLayer/menü" to="." method="_on_menü_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/menü/Devam et" to="." method="_on_devam_et_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/menü/Don" to="." method="_on_don_pressed"]
