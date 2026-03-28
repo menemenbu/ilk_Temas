@@ -30,6 +30,7 @@ func mesajcı(mesaj):
 	$CanvasLayer/Panel2/mesaj/devam.disabled=false
 
 func _ready() -> void:
+	$"CanvasLayer/ekran_mesajı".visible=true
 	$"CanvasLayer/Panel/menü/Label/ses".button_pressed=true
 	$CanvasLayer/Panel2.visible=false
 	#Cbit = true
@@ -64,14 +65,20 @@ func _process(_delta) -> void:
 
 
 func _on_ekran_pressed() -> void:
+	$"CanvasLayer/ekran_mesajı".visible=false
 	$CanvasLayer/Panel2.visible=true
 
 
 func _on_kapa_pressed() -> void:
+	var kapandı = false
+	if not kapandı:
+		$"CanvasLayer/ekran_mesajı2".visible=true
+		kapandı = true
 	$CanvasLayer/Panel2.visible=false
 
 
 func _on_ekran_2_pressed() -> void:
+	$"CanvasLayer/ekran_mesajı2".visible=false
 	$CanvasLayer/Panel3.visible=true
 
 
