@@ -3,8 +3,8 @@ extends Node
 var mesaj1 = "selam selam selam selam"
 var mesaj2 = "ben adal"
 
-var mesaj3 = "İnsanoğlu uzayı 1957 yılında ilk kez keşfetme şansı bulmuştur.O tarihte gönderilen sputnik 1 "
-var mesaj4 = "genel araştırmaların temelini atmış ve insanlar arası uzay rekabetini başlatmıştır.Bu rekabete hergün"
+var mesaj3 = "İnsanoğlu uzayı 1957 yılında ilk kez keşfetme şansı bulmuştur.O tarihte gönderilen sputnik 1 
+genel araştırmaların temelini atmış ve insanlar arası uzay rekabetini başlatmıştır.Bu rekabete hergün"
 var mesaj5 = "gördüğümüz Ay'a ulaşmak gibi büyük bir hedefle beraber *insanlar yukarıda hayatta kalabilirmi?* sorusunuda "
 var mesaj6 = "gündeme getirmiştir."
 var mesaj7 = "Sputnik 1 uydusundan sonra insanların aklındaki soruyu cevaplamak amaçlı Sputnik 2 gönderildi."

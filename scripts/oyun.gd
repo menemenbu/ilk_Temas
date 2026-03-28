@@ -57,18 +57,18 @@ func _process(_delta) -> void:
 	
 	if Cbit == true:
 		MesajS+=1
-		mesajcı(Hikaye.mesaj1)
+		mesajcı(Hikaye.mesaj3)
 		Cbit = false
 		await get_tree().create_timer(5).timeout
 	
-	if ses == false:pass
-		#$AudioStreamPlayer.stop()
+	if ses == false:
+		$AudioStreamPlayer.stop()
 	else:pass
 
 
 func _on_cevap_2_pressed() -> void:
 	$CanvasLayer/Panel2/mesaj/mesajI.text=""
-	mesajcı(Hikaye.mesaj2)
+	mesajcı(Hikaye.mesaj3)
 
 
 func _on_ekran_pressed() -> void:
@@ -81,3 +81,7 @@ func _on_check_box_toggled(_button_pressed) -> void:
 
 func _on_kapa_pressed() -> void:
 	$CanvasLayer/Panel2.visible=false
+
+
+func _on_ekran_2_pressed() -> void:
+	$CanvasLayer/Panel3.visible=true

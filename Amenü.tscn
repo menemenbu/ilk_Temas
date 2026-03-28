@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://sqcsds17hw0c"]
 
 [ext_resource type="Script" uid="uid://2c034kakvh4b" path="res://scripts/menu.gd" id="1_62iig"]
+[ext_resource type="Theme" uid="uid://dc6tye45d6aap" path="res://assets/Ubutton.tres" id="2_cc20m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bc7to"]
+font_size = 60
 
 [node name="Menu" type="Node2D" unique_id=767815300]
 script = ExtResource("1_62iig")
@@ -11,17 +15,27 @@ script = ExtResource("1_62iig")
 offset_left = 448.0
 offset_top = 408.0
 offset_right = 704.0
-offset_bottom = 472.0
+offset_bottom = 488.0
+theme = ExtResource("2_cc20m")
 theme_override_font_sizes/font_size = 32
 text = "ÇIKIŞ"
 
 [node name="Başla" type="Button" parent="CanvasLayer" unique_id=57719024]
 offset_left = 448.0
-offset_top = 320.0
+offset_top = 304.0
 offset_right = 704.0
 offset_bottom = 384.0
+theme = ExtResource("2_cc20m")
 theme_override_font_sizes/font_size = 32
 text = "BAŞLA"
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1707603520]
+offset_left = 256.0
+offset_top = 64.0
+offset_right = 897.0
+offset_bottom = 147.0
+text = "İLK TEMAS: AY GÖREVİ"
+label_settings = SubResource("LabelSettings_bc7to")
 
 [connection signal="pressed" from="CanvasLayer/çıkış" to="." method="_on_çıkış_pressed"]
 [connection signal="pressed" from="CanvasLayer/Başla" to="." method="_on_başla_pressed"]

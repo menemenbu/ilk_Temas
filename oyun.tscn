@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://3r24otax82dc" path="res://scripts/oyun.gd" id="1_d62lu"]
 [ext_resource type="AudioStream" uid="uid://d18ljrm4l33kr" path="res://assets/dragon-studio-keyboard-typing-asmr-356118.mp3" id="2_cnnjj"]
 [ext_resource type="Texture2D" uid="uid://b4yigukjrq058" path="res://assets/pixil-frame-0 (8).png" id="2_oe8mv"]
-[ext_resource type="Texture2D" uid="uid://dk5cxmhcdijot" path="res://assets/ANA EKRAN .png" id="3_2lw7e"]
+[ext_resource type="Texture2D" uid="uid://dqwqh514aocbw" path="res://assets/Ana Ekran (1).png" id="3_xdbvi"]
 [ext_resource type="Texture2D" uid="uid://mdk2d82ttd6j" path="res://assets/Mesaj Kutusu.png" id="4_4hrjw"]
 [ext_resource type="Theme" uid="uid://tn3a3hpjmw1u" path="res://assets/buton.tres" id="4_j06mm"]
 [ext_resource type="Texture2D" uid="uid://bnf1c3ca3772w" path="res://assets/Ayarlar menüsü.png" id="7_ljdso"]
@@ -38,6 +38,8 @@ region_rect = Rect2(304, 800, 400, 256)
 texture = ExtResource("7_xdbvi")
 region_rect = Rect2(304, 800, 400, 256)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xdbvi"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d62lu"]
 bg_color = Color(0, 0, 0, 0.1764706)
 
@@ -57,9 +59,8 @@ stream = ExtResource("2_cnnjj")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2018477852]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=770168232]
-position = Vector2(576, 324)
-scale = Vector2(0.5625, 0.6328125)
-texture = ExtResource("3_2lw7e")
+position = Vector2(575.99994, 324)
+texture = ExtResource("3_xdbvi")
 
 [node name="menü" type="Button" parent="CanvasLayer" unique_id=1735817266]
 offset_left = 1072.0
@@ -73,10 +74,17 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_2lw7e")
 theme_override_styles/focus = SubResource("StyleBoxTexture_ljdso")
 
 [node name="ekran" type="Button" parent="CanvasLayer" unique_id=728313658]
-offset_left = 384.0
-offset_top = 24.0
-offset_right = 800.0
-offset_bottom = 312.0
+offset_left = 472.0
+offset_top = 120.0
+offset_right = 848.0
+offset_bottom = 352.0
+flat = true
+
+[node name="ekran2" type="Button" parent="CanvasLayer" unique_id=1616129560]
+offset_left = 120.0
+offset_top = 56.0
+offset_right = 352.0
+offset_bottom = 416.0
 flat = true
 
 [node name="Panel2" type="Panel" parent="CanvasLayer" unique_id=1356260870]
@@ -95,10 +103,11 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_xdbvi")
 
 [node name="mesajI" type="Label" parent="CanvasLayer/Panel2/mesaj" unique_id=298151316]
 layout_mode = 0
-offset_left = 24.0
+offset_left = 48.0
 offset_top = 24.0
 offset_right = 624.0
 offset_bottom = 272.0
+autowrap_mode = 3
 
 [node name="cevap1" type="Button" parent="CanvasLayer/Panel2/mesaj" unique_id=1612865470]
 layout_mode = 0
@@ -133,6 +142,12 @@ offset_right = 688.0
 offset_bottom = 64.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_df4xg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ka572")
+
+[node name="Panel3" type="Panel" parent="CanvasLayer" unique_id=934952580]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xdbvi")
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=879897060]
 visible = false
@@ -182,8 +197,13 @@ offset_right = 108.0
 offset_bottom = 31.999996
 scale = Vector2(1.5, 1.5)
 
+[node name="dönüş" type="Panel" parent="CanvasLayer" unique_id=107387542]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="pressed" from="CanvasLayer/menü" to="." method="_on_menü_pressed"]
 [connection signal="pressed" from="CanvasLayer/ekran" to="." method="_on_ekran_pressed"]
+[connection signal="pressed" from="CanvasLayer/ekran2" to="." method="_on_ekran_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel2/mesaj/cevap2" to="." method="_on_cevap_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel2/mesaj/kapa" to="." method="_on_kapa_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/menü/Devam et" to="." method="_on_devam_et_pressed"]
