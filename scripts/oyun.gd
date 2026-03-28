@@ -30,6 +30,7 @@ func mesajcı(mesaj):
 	$CanvasLayer/Panel2/mesaj/devam.disabled=false
 
 func _ready() -> void:
+	$"CanvasLayer/ekran_mesajı2".visible=false
 	$"CanvasLayer/ekran_mesajı".visible=true
 	$"CanvasLayer/Panel/menü/Label/ses".button_pressed=true
 	$CanvasLayer/Panel2.visible=false
