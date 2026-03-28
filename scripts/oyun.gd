@@ -15,15 +15,23 @@ func seçim():
 	$CanvasLayer/mesaj/devam.visible=false
 
 func mesajcı(mesaj):
+	$CanvasLayer/mesaj/cevap1.disabled=true
+	$CanvasLayer/mesaj/cevap2.disabled=true
+	$CanvasLayer/mesaj/devam.disabled=true
 	$AudioStreamPlayer.play()
 	$CanvasLayer/mesaj/mesajI.text=""
 	for i in mesaj.length():
 			$CanvasLayer/mesaj/mesajI.text+=mesaj[i]
 			await get_tree().create_timer(0.04).timeout
 	$AudioStreamPlayer.stop()
+	$CanvasLayer/mesaj/cevap1.disabled=false
+	$CanvasLayer/mesaj/cevap2.disabled=false
+	$CanvasLayer/mesaj/devam.disabled=false
 
 func _ready() -> void:
-	Cbit = true
+	$"CanvasLayer/Panel/menü/Label/ses".button_pressed=true
+	$CanvasLayer/mesaj.visible=false
+	#Cbit = true
 	$CanvasLayer/mesaj/mesajI.text=""
 	$CanvasLayer/Panel.visible=false
 
@@ -55,4 +63,14 @@ func _process(_delta) -> void:
 
 
 func _on_cevap_2_pressed() -> void:
+	$CanvasLayer/mesaj/mesajI.text=""
 	mesajcı(Hikaye.mesaj2)
+
+
+func _on_ekran_pressed() -> void:
+	$CanvasLayer/mesaj.visible=true
+
+
+func _on_check_box_toggled(button_pressed) -> void:
+	#$AudioStreamPlayer.
+	pass # Replace with function body.
