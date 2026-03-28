@@ -59,3 +59,7 @@ func _process(_delta):
 	if durum == ResourceLoader.THREAD_LOAD_LOADED:
 		sahne = ResourceLoader.load_threaded_get("res://oyun.tscn")
 		
+
+
+func _on_atla_pressed() -> void:
+	get_tree().change_scene_to_packed(sahne)

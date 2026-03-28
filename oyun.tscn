@@ -38,11 +38,6 @@ region_rect = Rect2(304, 800, 400, 256)
 texture = ExtResource("7_xdbvi")
 region_rect = Rect2(304, 800, 400, 256)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xdbvi"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_xdbvi"]
-font_size = 84
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d62lu"]
 bg_color = Color(0, 0, 0, 0.1764706)
 
@@ -63,6 +58,7 @@ script = ExtResource("1_d62lu")
 stream = ExtResource("2_cnnjj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2018477852]
+layer = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=770168232]
 position = Vector2(576.00006, 324)
@@ -169,19 +165,24 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_df4xg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ka572")
 
 [node name="Panel3" type="Panel" parent="CanvasLayer" unique_id=934952580]
-visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_xdbvi")
 
-[node name="Label" type="Label" parent="CanvasLayer/Panel3" unique_id=203763503]
+[node name="değiştir" type="Button" parent="CanvasLayer/Panel3" unique_id=1062530755]
 layout_mode = 0
-offset_left = 296.0
-offset_top = 216.0
-offset_right = 836.0
-offset_bottom = 331.0
-text = "buraya kadar"
-label_settings = SubResource("LabelSettings_xdbvi")
+offset_left = 968.0
+offset_top = 544.0
+offset_right = 1128.0
+offset_bottom = 624.0
+text = "değiştir"
+
+[node name="kapat" type="Button" parent="CanvasLayer/Panel3" unique_id=801806661]
+layout_mode = 0
+offset_left = 968.0
+offset_top = 440.0
+offset_right = 1128.0
+offset_bottom = 520.0
+text = "kapat"
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=879897060]
 visible = false
@@ -226,6 +227,7 @@ text = "SES"
 label_settings = SubResource("LabelSettings_ljdso")
 
 [node name="ses" type="CheckButton" parent="CanvasLayer/Panel/menü/Label" unique_id=1000053827]
+visible = false
 layout_mode = 0
 offset_left = 64.0
 offset_right = 108.0
@@ -253,6 +255,7 @@ label_settings = SubResource("LabelSettings_rkro4")
 [connection signal="pressed" from="CanvasLayer/Panel2/mesaj/cevap2" to="." method="_on_cevap_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel2/mesaj/devam" to="." method="_on_devam_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel2/mesaj/kapa" to="." method="_on_kapa_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel3/değiştir" to="." method="_on_değiştir_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel3/kapat" to="." method="_on_kapat_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/menü/Devam et" to="." method="_on_devam_et_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/menü/Don" to="." method="_on_don_pressed"]
-[connection signal="toggled" from="CanvasLayer/Panel/menü/Label/ses" to="." method="_on_check_box_toggled"]

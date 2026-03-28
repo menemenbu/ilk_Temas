@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://doi0bf2kuabb3"]
+
+[ext_resource type="Texture2D" uid="uid://div1p1d3kia1h" path="res://assets/en marşinal rapor belgesi(8x).png" id="1_56ew5"]
+[ext_resource type="LabelSettings" uid="uid://bxwxb0qceolwo" path="res://assets/belge.tres" id="2_nmteo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kjrgf"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tjv6c"]
+line_spacing = -4.88
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w48fr"]
+line_spacing = -5.115
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6vntw"]
+line_spacing = -4.73
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" unique_id=198855228]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=958116607]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1438644862]
+position = Vector2(576, 320)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_56ew5")
+
+[node name="Label" type="Label" parent="CanvasLayer/Sprite2D" unique_id=2051308323]
+offset_left = -301.66666
+offset_top = -248.33333
+offset_right = -74.99997
+offset_bottom = -208.33333
+text = "Sistem"
+label_settings = ExtResource("2_nmteo")
+
+[node name="Label16" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1799681063]
+offset_left = -300.0
+offset_top = -425.0
+offset_right = 286.6667
+offset_bottom = -318.33334
+text = "Olası bir sağlık probleminde kullanabileceğimiz yaşam destek üniteleri:"
+label_settings = SubResource("LabelSettings_kjrgf")
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer/Sprite2D" unique_id=853948193]
+offset_left = -301.66666
+offset_top = -151.66667
+offset_right = -74.99997
+offset_bottom = -111.66667
+text = "EMU"
+label_settings = ExtResource("2_nmteo")
+
+[node name="Label3" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1844137115]
+offset_left = -301.66666
+offset_top = -88.333336
+offset_right = -74.99997
+offset_bottom = -48.333336
+text = "Orlan"
+label_settings = ExtResource("2_nmteo")
+
+[node name="Label4" type="Label" parent="CanvasLayer/Sprite2D" unique_id=261689263]
+offset_left = -301.66666
+offset_top = -25.000006
+offset_right = -74.99997
+offset_bottom = 14.999994
+text = "EVA"
+label_settings = ExtResource("2_nmteo")
+
+[node name="Label5" type="Label" parent="CanvasLayer/Sprite2D" unique_id=184615480]
+offset_left = 50.00001
+offset_top = -250.0
+offset_right = 276.6667
+offset_bottom = -210.0
+text = "Dezavantajlar (–)"
+label_settings = ExtResource("2_nmteo")
+
+[node name="Label6" type="Label" parent="CanvasLayer/Sprite2D" unique_id=498216047]
+offset_left = 50.00001
+offset_top = -153.33333
+offset_right = 276.6667
+offset_bottom = -113.33333
+text = "görece ağır"
+label_settings = ExtResource("2_nmteo")
+
+[node name="Label7" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1975418970]
+offset_left = 50.00001
+offset_top = -88.33333
+offset_right = 276.6667
+offset_bottom = -48.33333
+text = "termal kontrol sınırlı"
+label_settings = ExtResource("2_nmteo")
+
+[node name="Label8" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1362766783]
+offset_left = 50.00001
+offset_top = -24.999998
+offset_right = 276.6667
+offset_bottom = 15.000002
+text = "yetersiz test verileri"
+label_settings = ExtResource("2_nmteo")
+
+[node name="Label9" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1293388062]
+offset_left = 50.00001
+offset_top = 40.0
+offset_right = 276.6667
+offset_bottom = 80.0
+text = "Avantajlar (+)"
+label_settings = ExtResource("2_nmteo")
+
+[node name="Label10" type="Label" parent="CanvasLayer/Sprite2D" unique_id=150176544]
+offset_left = -301.66666
+offset_top = 103.33333
+offset_right = -74.99997
+offset_bottom = 143.33331
+text = "EMU"
+label_settings = ExtResource("2_nmteo")
+
+[node name="Label11" type="Label" parent="CanvasLayer/Sprite2D" unique_id=2105033846]
+offset_left = -300.0
+offset_top = 168.33333
+offset_right = -73.33331
+offset_bottom = 208.33333
+text = "Orlan"
+label_settings = ExtResource("2_nmteo")
+
+[node name="Label12" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1605665395]
+offset_left = -301.66666
+offset_top = 231.66667
+offset_right = -74.99997
+offset_bottom = 271.6667
+text = "EVA"
+label_settings = ExtResource("2_nmteo")
+
+[node name="Label13" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1374699390]
+offset_left = 50.00001
+offset_top = 101.66667
+offset_right = 289.0
+offset_bottom = 150.66667
+text = "Çok katmanlı güçlü zırh
+gelişmiş termal sistem"
+label_settings = SubResource("LabelSettings_tjv6c")
+
+[node name="Label14" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1789489483]
+offset_left = 50.00001
+offset_top = 166.66669
+offset_right = 278.0
+offset_bottom = 215.66669
+text = "basit ve güvenilir pasif sistem
+dayanıklı sert kabuk"
+label_settings = SubResource("LabelSettings_w48fr")
+
+[node name="Label15" type="Label" parent="CanvasLayer/Sprite2D" unique_id=93714150]
+offset_left = 50.00001
+offset_top = 231.66669
+offset_right = 276.6667
+offset_bottom = 280.6667
+text = "dijital kontrollü sistem
+daha hafif"
+label_settings = SubResource("LabelSettings_6vntw")

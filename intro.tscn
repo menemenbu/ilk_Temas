@@ -52,6 +52,20 @@ offset_right = 62.777725
 offset_bottom = 23.790123
 text = "devam"
 
+[node name="atla" type="Button" parent="CanvasLayer/Sprite2D" unique_id=417252601]
+offset_left = 426.66666
+offset_top = 218.07407
+offset_right = 504.8889
+offset_bottom = 249.67902
+theme = ExtResource("4_y6ycx")
+
+[node name="Label" type="Label" parent="CanvasLayer/Sprite2D/atla" unique_id=1809289053]
+layout_mode = 0
+offset_left = 21.333334
+offset_right = 61.333336
+offset_bottom = 23.0
+text = "ATLA"
+
 [node name="dönüş" type="Panel" parent="CanvasLayer" unique_id=1920583501]
 visible = false
 offset_right = 1152.0
@@ -67,3 +81,4 @@ text = "YÜKLENİYOR..."
 label_settings = SubResource("LabelSettings_0a7ni")
 
 [connection signal="pressed" from="CanvasLayer/Sprite2D/Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sprite2D/atla" to="." method="_on_atla_pressed"]

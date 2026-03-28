@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://braolqbowup43"]
+
+[ext_resource type="Texture2D" uid="uid://div1p1d3kia1h" path="res://assets/en marşinal rapor belgesi(8x).png" id="1_dah0l"]
+[ext_resource type="LabelSettings" uid="uid://bxwxb0qceolwo" path="res://assets/belge.tres" id="2_e4j11"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_du866"]
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e4j11"]
+line_spacing = -4.695
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" unique_id=652631956]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=898840545]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1687140932]
+position = Vector2(576, 320)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_dah0l")
+
+[node name="Label" type="Label" parent="CanvasLayer/Sprite2D" unique_id=691704877]
+offset_left = -301.66666
+offset_top = -423.33325
+offset_right = 285.00003
+offset_bottom = -316.6666
+scale = Vector2(0.99806476, 1.0004593)
+text = "Olası bir motor probleminde kullanabileceğimiz motorlar:"
+label_settings = SubResource("LabelSettings_du866")
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1813930329]
+offset_left = -303.3333
+offset_top = -250.0
+offset_right = -63.333313
+offset_bottom = -210.0
+scale = Vector2(1.1140438, 1.0343264)
+text = "Motor Türü"
+label_settings = ExtResource("2_e4j11")
+
+[node name="Label3" type="Label" parent="CanvasLayer/Sprite2D" unique_id=611267444]
+offset_left = -303.3333
+offset_top = -151.66666
+offset_right = -63.333313
+offset_bottom = -111.66666
+text = "Sıvı Yakıtlı (Gaz Jeneratörlü)"
+label_settings = ExtResource("2_e4j11")
+
+[node name="Label4" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1690578981]
+offset_left = -303.3333
+offset_top = -86.666664
+offset_right = -63.333313
+offset_bottom = -46.666664
+text = "Katı Yakıtlı (Booster)"
+label_settings = ExtResource("2_e4j11")
+
+[node name="Label5" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1421645256]
+offset_left = -303.3333
+offset_top = -23.33333
+offset_right = -63.333313
+offset_bottom = 16.66667
+text = "İyon (Kripton)"
+label_settings = ExtResource("2_e4j11")
+
+[node name="Label6" type="Label" parent="CanvasLayer/Sprite2D" unique_id=684316488]
+offset_left = -303.3333
+offset_top = 103.33333
+offset_right = -63.333313
+offset_bottom = 143.33331
+text = "Sıvı Yakıtlı (Gaz Jeneratörlü)"
+label_settings = ExtResource("2_e4j11")
+
+[node name="Label7" type="Label" parent="CanvasLayer/Sprite2D" unique_id=619523928]
+offset_left = -303.3333
+offset_top = 166.66666
+offset_right = -63.333313
+offset_bottom = 206.66664
+text = "Katı Yakıtlı (Booster)"
+label_settings = ExtResource("2_e4j11")
+
+[node name="Label8" type="Label" parent="CanvasLayer/Sprite2D" unique_id=849128983]
+offset_left = -303.3333
+offset_top = 231.66666
+offset_right = -63.333313
+offset_bottom = 271.66663
+text = "İyon (Kripton)"
+label_settings = ExtResource("2_e4j11")
+
+[node name="Label9" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1379107152]
+offset_left = 50.000008
+offset_top = -246.66666
+offset_right = 290.00003
+offset_bottom = -206.66669
+text = "Dezavantajlar (–)"
+label_settings = ExtResource("2_e4j11")
+
+[node name="Label10" type="Label" parent="CanvasLayer/Sprite2D" unique_id=2118664111]
+offset_left = 50.00001
+offset_top = -151.66666
+offset_right = 289.99997
+offset_bottom = -111.66669
+text = "Verim düşük, yakıt kaybı"
+label_settings = ExtResource("2_e4j11")
+
+[node name="Label11" type="Label" parent="CanvasLayer/Sprite2D" unique_id=554121837]
+offset_left = 50.00001
+offset_top = -89.99999
+offset_right = 289.99997
+offset_bottom = -50.000023
+text = "Kontrol edilemez, patlama riski"
+label_settings = ExtResource("2_e4j11")
+
+[node name="Label12" type="Label" parent="CanvasLayer/Sprite2D" unique_id=122891710]
+offset_left = 50.00001
+offset_top = -24.999996
+offset_right = 289.99997
+offset_bottom = 14.999973
+text = "İtiş çok düşük"
+label_settings = ExtResource("2_e4j11")
+
+[node name="Label13" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1835027182]
+offset_left = 50.00001
+offset_top = 38.333332
+offset_right = 289.99997
+offset_bottom = 78.3333
+text = "Avantajlar (+)"
+label_settings = ExtResource("2_e4j11")
+
+[node name="Label14" type="Label" parent="CanvasLayer/Sprite2D" unique_id=933391060]
+offset_left = 50.00001
+offset_top = 105.0
+offset_right = 289.99997
+offset_bottom = 144.99997
+text = "Basit yapı, güvenilir, ucuz"
+label_settings = ExtResource("2_e4j11")
+
+[node name="Label15" type="Label" parent="CanvasLayer/Sprite2D" unique_id=155905076]
+offset_left = 50.00001
+offset_top = 166.66666
+offset_right = 281.66663
+offset_bottom = 208.66666
+text = "Çok güçlü kalkış, basit yapı"
+label_settings = SubResource("LabelSettings_e4j11")
+autowrap_mode = 3
+
+[node name="Label16" type="Label" parent="CanvasLayer/Sprite2D" unique_id=2106455161]
+offset_left = 50.00001
+offset_top = 231.66667
+offset_right = 289.99997
+offset_bottom = 271.66663
+text = "Çok verimli, az yakıt tüketir"
+label_settings = ExtResource("2_e4j11")

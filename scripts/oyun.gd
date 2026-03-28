@@ -4,6 +4,9 @@ var Cbit
 var MesajS = 0
 var yazılan
 var yaz=true
+var belgetscn
+var belgetscn2
+var Abelge
 
 func okuma():
 	$CanvasLayer/Panel2/mesaj/cevap1.visible=false
@@ -30,6 +33,7 @@ func mesajcı(mesaj):
 	$CanvasLayer/Panel2/mesaj/devam.disabled=false
 
 func _ready() -> void:
+	$CanvasLayer/Panel3.visible=false
 	$"CanvasLayer/ekran_mesajı2".visible=false
 	$"CanvasLayer/ekran_mesajı".visible=true
 	$"CanvasLayer/Panel/menü/Label/ses".button_pressed=true
@@ -79,6 +83,11 @@ func _on_kapa_pressed() -> void:
 
 
 func _on_ekran_2_pressed() -> void:
+	belgetscn = load("res://belge1.tscn").instantiate()
+	add_child(belgetscn)
+	Abelge=1
+	
+	#belgetscn.queue_free()
 	$"CanvasLayer/ekran_mesajı2".visible=false
 	$CanvasLayer/Panel3.visible=true
 
@@ -86,11 +95,26 @@ func _on_ekran_2_pressed() -> void:
 func _on_devam_pressed() -> void:
 	pass
 
-
-
 func _on_cevap_1_pressed() -> void:
 	pass # Replace with function body.
 
 func _on_cevap_2_pressed() -> void:pass
 	#$CanvasLayer/Panel2/mesaj/mesajI.text=""
 	#mesajcı(Hikaye.mesaj1)
+
+
+func _on_değiştir_pressed() -> void:
+	if Abelge == 1:
+		belgetscn2 = load("res://belge2.tscn").instantiate()
+		belgetscn.queue_free()
+		add_child(belgetscn2)
+	else:
+		belgetscn = load("res://belge1.tscn").instantiate()
+		belgetscn2.queue_free()
+		add_child(belgetscn)
+
+
+func _on_kapat_pressed() -> void:
+	belgetscn2.queue_free()
+	belgetscn.queue_free()
+	$CanvasLayer/Panel3.visible=false
