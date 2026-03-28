@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dovd3ksi68ta0"]
+
+[ext_resource type="Texture2D" uid="uid://c7qeoxd7lgdw1" path="res://assets/yeni rapor belgesi (16x).png" id="1_g3pxc"]
+
+[node name="Node2D" type="Node2D" unique_id=1136850238]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1049772165]
+position = Vector2(560, 312)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_g3pxc")
