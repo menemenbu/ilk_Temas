@@ -51,10 +51,6 @@ func _on_button_pressed() -> void:
 		yazılan = "mesaj7"
 		yaz = false
 	elif yazılan == "mesaj7" and yaz:
-		mesajcı(Hikaye.mesaj8)
-		yazılan = "mesaj8"
-		yaz = false
-	elif yazılan == "mesaj8":
 		get_tree().change_scene_to_packed(sahne)
 
 

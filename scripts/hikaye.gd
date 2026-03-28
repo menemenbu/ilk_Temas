@@ -10,7 +10,7 @@ var mesaj4 = "Laika  uzayda uzun süre hayatta kalamamış olmasına rağmen uza
 var mesaj5= "Bu olaylardan 4 yıl sonra insanlar ilk kez uzaya bir insan gönderdi ismi Yuri Gagarin'di. Bir insanın uzaya çıkması o yıllar çok popüler olmuş ve genel rekabeti başlatan Sovyetler birliğini dahada ileri taşımıştır."
 var mesaj6= "Bu durumdan geri kalmak istemeyen ABD(Amerika Birleşik Devletleri).Apollo 11 göreviyle Ay'a ilk kez ayak basmıştır.Bu onuru almayı hak eden insanın ismi Neil Armstrong'dur."
 var mesaj7= "Tabiki gördüğümüz bu keşif görevleri bize yarar sağlasada bi süre sonra kullanımdan çıkmış Sputnik 1 gibi uyduların uzayı kirlettiğini ve yavaş yavaş dünya etrafında bir çöp yığını oluşmaya başladığı görülmektedir."
-var mesaj8= "Selam,yıllar sonra uzay ajansında işini yeniden kazandın,gerçekten çok şanslı olmalısın. Neyse sen yokken burda bazı  şeyler değişti.Yeni kuralları öğrenmenin vakti geldi diye düşünüyorum."
+var mesaj8= "Selam,yıllar sonra uzay ajansında işini yeniden kazandın,gerçekten çok şanslı olmalısın. Neyse sen yokken burda bazı  şeyler değişti. Yeni kuralları öğrenmenin vakti geldi diye düşünüyorum."
 
 #(hikaye)
 
