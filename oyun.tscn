@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://3r24otax82dc" path="res://scripts/oyun.gd" id="1_d62lu"]
 [ext_resource type="AudioStream" uid="uid://d18ljrm4l33kr" path="res://assets/dragon-studio-keyboard-typing-asmr-356118.mp3" id="2_cnnjj"]
+[ext_resource type="AudioStream" uid="uid://bduen4ywd1jdc" path="res://assets/relaxed-scene-made-with-Voicemod.mp3" id="2_ka572"]
 [ext_resource type="Texture2D" uid="uid://b4yigukjrq058" path="res://assets/pixil-frame-0 (8).png" id="2_oe8mv"]
 [ext_resource type="Texture2D" uid="uid://b4t0rb132f3k0" path="res://assets/pixil-frame-0 (1) (1).png" id="3_xdbvi"]
 [ext_resource type="Texture2D" uid="uid://mdk2d82ttd6j" path="res://assets/Mesaj Kutusu.png" id="4_4hrjw"]
@@ -76,9 +77,8 @@ font_size = 30
 [node name="Oyun" type="Node2D" unique_id=56076303]
 script = ExtResource("1_d62lu")
 
-[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="." unique_id=1932772049]
-
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=869773031]
+stream = ExtResource("2_ka572")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1903967044]
 stream = ExtResource("2_cnnjj")

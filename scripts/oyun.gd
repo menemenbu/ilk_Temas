@@ -65,6 +65,7 @@ func _process(_delta) -> void:
 
 func _on_ekran_pressed() -> void:
 	var ilk=true
+	$CanvasLayer/Panel3/kapat.disabled=true
 	if ilk:
 		mesajcı(Hikaye.mesaj8)
 	if MesajS==1:
@@ -72,8 +73,17 @@ func _on_ekran_pressed() -> void:
 		$CanvasLayer/Panel2/mesaj/cevap1.text="Sıvı Yakıtlı"
 		$CanvasLayer/Panel2/mesaj/cevap2.text="İyon"
 		$CanvasLayer/Panel2/mesaj/devam.text="Katı Yakıtlı"
+	elif MesajS==2:
+		mesajcı(Hikaye.mesaj02)
+		okuma()
+	elif MesajS==3:pass
+	elif MesajS==4:
+		mesajcı(Hikaye.mesaj04)
+	elif MesajS==5:
+		mesajcı(Hikaye.mesaj05)
 	$"CanvasLayer/ekran_mesajı".visible=false
 	$CanvasLayer/Panel2.visible=true
+	$CanvasLayer/Panel3/kapat.disabled=false
 
 
 func _on_kapa_pressed() -> void:
@@ -96,18 +106,27 @@ func _on_devam_pressed() -> void:
 	$CanvasLayer/Panel2.visible=false
 	if MesajS==1:
 		Global.motorS="Katı"
+		MesajS+=1
+	elif MesajS==2:
+		MesajS+=1
 
 func _on_cevap_1_pressed() -> void:
 	$CanvasLayer/Panel2/mesaj/mesajI.text=""
 	$CanvasLayer/Panel2.visible=false
 	if MesajS==1:
 		Global.motorS="Sıvı"
+		MesajS+=1
+	elif MesajS==2:
+		MesajS+=1
 
 func _on_cevap_2_pressed() -> void:
 	$CanvasLayer/Panel2/mesaj/mesajI.text=""
 	$CanvasLayer/Panel2.visible=false
 	if MesajS==1:
 		Global.motorS="iyon"
+		MesajS+=1
+	elif MesajS==2:
+		MesajS+=1
 
 
 func _on_kapat_pressed() -> void:
