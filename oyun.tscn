@@ -40,6 +40,9 @@ region_rect = Rect2(304, 800, 400, 256)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xdbvi"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_xdbvi"]
+font_size = 84
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d62lu"]
 bg_color = Color(0, 0, 0, 0.1764706)
 
@@ -77,6 +80,22 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_4hrjw")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_2lw7e")
 theme_override_styles/focus = SubResource("StyleBoxTexture_ljdso")
 
+[node name="ekran_mesajı" type="Label" parent="CanvasLayer" unique_id=1155080081]
+offset_left = 848.0
+offset_top = 216.0
+offset_right = 1040.0
+offset_bottom = 256.0
+text = "<---- bu monitöre tıkla"
+autowrap_mode = 3
+
+[node name="ekran_mesajı2" type="Label" parent="CanvasLayer" unique_id=1410085903]
+offset_left = 352.0
+offset_top = 64.0
+offset_right = 520.0
+offset_bottom = 139.0
+text = "<---- bu monitöre tıklayarak raporlara erişebilirsin"
+autowrap_mode = 3
+
 [node name="ekran" type="Button" parent="CanvasLayer" unique_id=728313658]
 offset_left = 472.0
 offset_top = 120.0
@@ -92,6 +111,7 @@ offset_bottom = 416.0
 flat = true
 
 [node name="Panel2" type="Panel" parent="CanvasLayer" unique_id=1356260870]
+visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_rkro4")
@@ -153,6 +173,15 @@ visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_xdbvi")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel3" unique_id=203763503]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 216.0
+offset_right = 836.0
+offset_bottom = 331.0
+text = "buraya kadar"
+label_settings = SubResource("LabelSettings_xdbvi")
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=879897060]
 visible = false

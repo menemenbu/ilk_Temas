@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dovd3ksi68ta0"]
 
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://div1p1d3kia1h" path="res://assets/en marşinal rapor belgesi(8x).png" id="1_g3pxc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j2bh7"]
@@ -56,9 +57,20 @@ font_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1136850238]
 position = Vector2(-1, 2)
+=======
+[ext_resource type="Script" uid="uid://2c034kakvh4b" path="res://scripts/menu.gd" id="1_j2bh7"]
+[ext_resource type="Theme" uid="uid://dc6tye45d6aap" path="res://assets/Ubutton.tres" id="2_tokyi"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1767436657]
+[sub_resource type="LabelSettings" id="LabelSettings_bc7to"]
+font_size = 60
 
+[node name="Menu" type="Node2D" unique_id=767815300]
+script = ExtResource("1_j2bh7")
+>>>>>>> 55a5dd9200f999bdc26d29f10b4cb6e6f6ccdf6f
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=771720810]
+
+<<<<<<< HEAD
 [node name="EnMarşinalRaporBelgesi(8x)" type="Sprite2D" parent="." unique_id=1763120794]
 position = Vector2(738.99994, 337.00003)
 scale = Vector2(0.57324225, 0.63183594)
@@ -202,3 +214,33 @@ pivot_offset = Vector2(275.62518, 126.61514)
 text = "Sıvı yakıtlı(gaz jeneratörlü)"
 label_settings = SubResource("LabelSettings_o4fd0")
 autowrap_mode = 3
+=======
+[node name="çıkış" type="Button" parent="CanvasLayer" unique_id=1802247874]
+offset_left = 448.0
+offset_top = 416.0
+offset_right = 704.0
+offset_bottom = 496.0
+theme = ExtResource("2_tokyi")
+theme_override_font_sizes/font_size = 32
+text = "ÇIKIŞ"
+
+[node name="Başla" type="Button" parent="CanvasLayer" unique_id=57719024]
+offset_left = 448.0
+offset_top = 304.0
+offset_right = 704.0
+offset_bottom = 384.0
+theme = ExtResource("2_tokyi")
+theme_override_font_sizes/font_size = 32
+text = "BAŞLA"
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1707603520]
+offset_left = 256.0
+offset_top = 80.0
+offset_right = 897.0
+offset_bottom = 163.0
+text = "İLK TEMAS: AY GÖREVİ"
+label_settings = SubResource("LabelSettings_bc7to")
+
+[connection signal="pressed" from="CanvasLayer/çıkış" to="." method="_on_çıkış_pressed"]
+[connection signal="pressed" from="CanvasLayer/Başla" to="." method="_on_başla_pressed"]
+>>>>>>> 55a5dd9200f999bdc26d29f10b4cb6e6f6ccdf6f

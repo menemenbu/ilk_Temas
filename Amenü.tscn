@@ -1,15 +1,22 @@
 [gd_scene format=3 uid="uid://sqcsds17hw0c"]
 
 [ext_resource type="Script" uid="uid://2c034kakvh4b" path="res://scripts/menu.gd" id="1_62iig"]
+[ext_resource type="Texture2D" uid="uid://b2c0s4wbxww33" path="res://assets/strart ekranı.png" id="2_bc7to"]
 [ext_resource type="Theme" uid="uid://dc6tye45d6aap" path="res://assets/Ubutton.tres" id="2_cc20m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bc7to"]
 font_size = 60
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Node2D" unique_id=767815300]
 script = ExtResource("1_62iig")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=771720810]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=654772803]
+position = Vector2(576, 324)
+texture = ExtResource("2_bc7to")
 
 [node name="çıkış" type="Button" parent="CanvasLayer" unique_id=1802247874]
 offset_left = 448.0
