@@ -169,6 +169,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_df4xg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ka572")
 
 [node name="Panel3" type="Panel" parent="CanvasLayer" unique_id=934952580]
+visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_xdbvi")
