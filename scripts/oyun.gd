@@ -1,9 +1,29 @@
 extends Node2D
 
-var Cbit = false
+var Cbit
 var MesajS = 0
+var hız = 10
  
+func okuma():
+	$CanvasLayer/mesaj/cevap1.visible=false
+	$CanvasLayer/mesaj/cevap2.visible=false
+	$CanvasLayer/mesaj/devam.visible=true
+
+func seçim():
+	$CanvasLayer/mesaj/cevap1.visible=true
+	$CanvasLayer/mesaj/cevap2.visible=true
+	$CanvasLayer/mesaj/devam.visible=false
+
+func mesajcı(mesaj):
+	$AudioStreamPlayer.play()
+	$CanvasLayer/mesaj/mesajI.text=""
+	for i in mesaj.length():
+			$CanvasLayer/mesaj/mesajI.text+=mesaj[i]
+			await get_tree().create_timer(0.04).timeout
+	$AudioStreamPlayer.stop()
+
 func _ready() -> void:
+	Cbit = true
 	$CanvasLayer/mesaj/mesajI.text=""
 	$CanvasLayer/Panel.visible=false
 
@@ -28,5 +48,11 @@ func _process(_delta) -> void:
 	
 	if Cbit == true:
 		MesajS+=1
-		for i in range(Hikaye.mesaj1.length()):
-			$CanvasLayer/mesaj/mesajI.text+=Hikaye.mesaj1[i]
+		mesajcı(Hikaye.mesaj1)
+		Cbit = false
+		await get_tree().create_timer(5).timeout
+	
+
+
+func _on_cevap_2_pressed() -> void:
+	mesajcı(Hikaye.mesaj2)

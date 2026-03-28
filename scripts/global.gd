@@ -17,3 +17,4 @@ func _on_button_pressed() -> void:
 		#await get_tree().create_timer(hız).timeout
 	await get_tree().create_timer(5).timeout
 	$mesaj.visible=false
+	

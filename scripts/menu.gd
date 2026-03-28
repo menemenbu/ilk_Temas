@@ -1,5 +1,7 @@
 extends Node
 
+func _ready() -> void:
+	print(Hikaye.mesaj1.length())
 
 func _on_başla_pressed() -> void:
 	ResourceLoader.load_threaded_request("res://oyun.tscn")

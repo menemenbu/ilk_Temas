@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dv3mq4qlil1d0"]
 
 [ext_resource type="Script" uid="uid://3r24otax82dc" path="res://scripts/oyun.gd" id="1_d62lu"]
+[ext_resource type="AudioStream" uid="uid://d18ljrm4l33kr" path="res://assets/dragon-studio-keyboard-typing-asmr-356118.mp3" id="2_cnnjj"]
 [ext_resource type="Texture2D" uid="uid://b4yigukjrq058" path="res://assets/pixil-frame-0 (8).png" id="2_oe8mv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cnnjj"]
@@ -23,6 +24,9 @@ bg_color = Color(0, 0, 0, 0.1764706)
 
 [node name="Oyun" type="Node2D" unique_id=56076303]
 script = ExtResource("1_d62lu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1903967044]
+stream = ExtResource("2_cnnjj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2018477852]
 
@@ -80,6 +84,7 @@ offset_right = 680.0
 offset_bottom = 296.0
 
 [node name="cevap1" type="Button" parent="CanvasLayer/mesaj" unique_id=1612865470]
+visible = false
 layout_mode = 0
 offset_left = 64.0
 offset_top = 296.0
@@ -87,12 +92,22 @@ offset_right = 192.0
 offset_bottom = 344.0
 
 [node name="cevap2" type="Button" parent="CanvasLayer/mesaj" unique_id=2097498878]
+visible = false
 layout_mode = 0
 offset_left = 512.0
 offset_top = 296.0
 offset_right = 640.0
 offset_bottom = 344.0
 
+[node name="devam" type="Button" parent="CanvasLayer/mesaj" unique_id=711551121]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 288.0
+offset_right = 424.0
+offset_bottom = 344.0
+text = "Devam et"
+
 [connection signal="pressed" from="CanvasLayer/menü" to="." method="_on_menü_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/menü/Devam et" to="." method="_on_devam_et_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/menü/Don" to="." method="_on_don_pressed"]
+[connection signal="pressed" from="CanvasLayer/mesaj/cevap2" to="." method="_on_cevap_2_pressed"]

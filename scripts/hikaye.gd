@@ -1,6 +1,7 @@
 extends Node
 #(intro) 
-var mesaj1 ="selam"
+var mesaj1 = "selam selam selam selam"
+var mesaj2 = "ben adal"
 #seslendiren:Yusuf"
 
 #İnsanoğlu uzayı 1957 yılında ilk kez keşfetme şansı bulmuştur.O tarihte gönderilen sputnik 1 
