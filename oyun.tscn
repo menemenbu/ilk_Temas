@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://3r24otax82dc" path="res://scripts/oyun.gd" id="1_d62lu"]
 [ext_resource type="AudioStream" uid="uid://d18ljrm4l33kr" path="res://assets/dragon-studio-keyboard-typing-asmr-356118.mp3" id="2_cnnjj"]
 [ext_resource type="Texture2D" uid="uid://b4yigukjrq058" path="res://assets/pixil-frame-0 (8).png" id="2_oe8mv"]
-[ext_resource type="Texture2D" uid="uid://dqwqh514aocbw" path="res://assets/Ana Ekran (1).png" id="3_xdbvi"]
+[ext_resource type="Texture2D" uid="uid://b4t0rb132f3k0" path="res://assets/pixil-frame-0 (1) (1).png" id="3_xdbvi"]
 [ext_resource type="Texture2D" uid="uid://mdk2d82ttd6j" path="res://assets/Mesaj Kutusu.png" id="4_4hrjw"]
 [ext_resource type="Theme" uid="uid://tn3a3hpjmw1u" path="res://assets/buton.tres" id="4_j06mm"]
 [ext_resource type="Texture2D" uid="uid://bnf1c3ca3772w" path="res://assets/Ayarlar menüsü.png" id="7_ljdso"]
@@ -50,6 +50,9 @@ region_rect = Rect2(1712, 464, 864, 1008)
 [sub_resource type="LabelSettings" id="LabelSettings_ljdso"]
 font_size = 31
 
+[sub_resource type="LabelSettings" id="LabelSettings_rkro4"]
+font_size = 30
+
 [node name="Oyun" type="Node2D" unique_id=56076303]
 script = ExtResource("1_d62lu")
 
@@ -59,7 +62,8 @@ stream = ExtResource("2_cnnjj")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2018477852]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=770168232]
-position = Vector2(575.99994, 324)
+position = Vector2(576.00006, 324)
+scale = Vector2(0.5625, 0.5625)
 texture = ExtResource("3_xdbvi")
 
 [node name="menü" type="Button" parent="CanvasLayer" unique_id=1735817266]
@@ -88,7 +92,6 @@ offset_bottom = 416.0
 flat = true
 
 [node name="Panel2" type="Panel" parent="CanvasLayer" unique_id=1356260870]
-visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_rkro4")
@@ -110,6 +113,7 @@ offset_bottom = 272.0
 autowrap_mode = 3
 
 [node name="cevap1" type="Button" parent="CanvasLayer/Panel2/mesaj" unique_id=1612865470]
+visible = false
 layout_mode = 0
 offset_left = 64.0
 offset_top = 288.0
@@ -118,6 +122,7 @@ offset_bottom = 344.0
 theme = ExtResource("4_j06mm")
 
 [node name="cevap2" type="Button" parent="CanvasLayer/Panel2/mesaj" unique_id=2097498878]
+visible = false
 layout_mode = 0
 offset_left = 512.0
 offset_top = 288.0
@@ -182,6 +187,7 @@ theme = ExtResource("4_j06mm")
 text = "Menüye Dön"
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel/menü" unique_id=1369737517]
+visible = false
 layout_mode = 0
 offset_left = 64.0
 offset_top = 64.0
@@ -198,13 +204,25 @@ offset_bottom = 31.999996
 scale = Vector2(1.5, 1.5)
 
 [node name="dönüş" type="Panel" parent="CanvasLayer" unique_id=107387542]
-offset_right = 40.0
-offset_bottom = 40.0
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="CanvasLayer/dönüş" unique_id=1902357337]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 552.0
+offset_right = 1248.0
+offset_bottom = 640.0
+text = "YÜKLENİYOR..."
+label_settings = SubResource("LabelSettings_rkro4")
 
 [connection signal="pressed" from="CanvasLayer/menü" to="." method="_on_menü_pressed"]
 [connection signal="pressed" from="CanvasLayer/ekran" to="." method="_on_ekran_pressed"]
 [connection signal="pressed" from="CanvasLayer/ekran2" to="." method="_on_ekran_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel2/mesaj/cevap1" to="." method="_on_cevap_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel2/mesaj/cevap2" to="." method="_on_cevap_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel2/mesaj/devam" to="." method="_on_devam_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel2/mesaj/kapa" to="." method="_on_kapa_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/menü/Devam et" to="." method="_on_devam_et_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/menü/Don" to="." method="_on_don_pressed"]
