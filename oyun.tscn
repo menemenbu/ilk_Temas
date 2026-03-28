@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://mdk2d82ttd6j" path="res://assets/Mesaj Kutusu.png" id="4_4hrjw"]
 [ext_resource type="Theme" uid="uid://tn3a3hpjmw1u" path="res://assets/buton.tres" id="4_j06mm"]
 [ext_resource type="Texture2D" uid="uid://bnf1c3ca3772w" path="res://assets/Ayarlar menüsü.png" id="7_ljdso"]
+[ext_resource type="Texture2D" uid="uid://ghigo6ygru25" path="res://assets/kapama butonu.png" id="7_xdbvi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cnnjj"]
 texture = ExtResource("2_oe8mv")
@@ -23,9 +24,19 @@ texture = ExtResource("2_oe8mv")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ljdso"]
 texture = ExtResource("2_oe8mv")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rkro4"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xdbvi"]
 texture = ExtResource("4_4hrjw")
 region_rect = Rect2(88, 48, 824, 400)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_df4xg"]
+texture = ExtResource("7_xdbvi")
+region_rect = Rect2(304, 800, 400, 256)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ka572"]
+texture = ExtResource("7_xdbvi")
+region_rect = Rect2(304, 800, 400, 256)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d62lu"]
 bg_color = Color(0, 0, 0, 0.1764706)
@@ -68,22 +79,28 @@ offset_right = 800.0
 offset_bottom = 312.0
 flat = true
 
-[node name="mesaj" type="Panel" parent="CanvasLayer" unique_id=353497292]
+[node name="Panel2" type="Panel" parent="CanvasLayer" unique_id=1356260870]
 visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rkro4")
+
+[node name="mesaj" type="Panel" parent="CanvasLayer/Panel2" unique_id=353497292]
+layout_mode = 0
 offset_left = 224.0
 offset_top = 104.0
 offset_right = 928.0
 offset_bottom = 488.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_xdbvi")
 
-[node name="mesajI" type="Label" parent="CanvasLayer/mesaj" unique_id=298151316]
+[node name="mesajI" type="Label" parent="CanvasLayer/Panel2/mesaj" unique_id=298151316]
 layout_mode = 0
 offset_left = 24.0
 offset_top = 24.0
-offset_right = 680.0
-offset_bottom = 296.0
+offset_right = 624.0
+offset_bottom = 272.0
 
-[node name="cevap1" type="Button" parent="CanvasLayer/mesaj" unique_id=1612865470]
+[node name="cevap1" type="Button" parent="CanvasLayer/Panel2/mesaj" unique_id=1612865470]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 288.0
@@ -91,7 +108,7 @@ offset_right = 192.0
 offset_bottom = 344.0
 theme = ExtResource("4_j06mm")
 
-[node name="cevap2" type="Button" parent="CanvasLayer/mesaj" unique_id=2097498878]
+[node name="cevap2" type="Button" parent="CanvasLayer/Panel2/mesaj" unique_id=2097498878]
 layout_mode = 0
 offset_left = 512.0
 offset_top = 288.0
@@ -99,7 +116,7 @@ offset_right = 640.0
 offset_bottom = 344.0
 theme = ExtResource("4_j06mm")
 
-[node name="devam" type="Button" parent="CanvasLayer/mesaj" unique_id=711551121]
+[node name="devam" type="Button" parent="CanvasLayer/Panel2/mesaj" unique_id=711551121]
 layout_mode = 0
 offset_left = 280.0
 offset_top = 288.0
@@ -108,7 +125,17 @@ offset_bottom = 344.0
 theme = ExtResource("4_j06mm")
 text = "Devam et"
 
+[node name="kapa" type="Button" parent="CanvasLayer/Panel2/mesaj" unique_id=1502105718]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 24.0
+offset_right = 688.0
+offset_bottom = 64.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_df4xg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ka572")
+
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=879897060]
+visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_d62lu")
@@ -157,7 +184,8 @@ scale = Vector2(1.5, 1.5)
 
 [connection signal="pressed" from="CanvasLayer/menü" to="." method="_on_menü_pressed"]
 [connection signal="pressed" from="CanvasLayer/ekran" to="." method="_on_ekran_pressed"]
-[connection signal="pressed" from="CanvasLayer/mesaj/cevap2" to="." method="_on_cevap_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel2/mesaj/cevap2" to="." method="_on_cevap_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel2/mesaj/kapa" to="." method="_on_kapa_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/menü/Devam et" to="." method="_on_devam_et_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/menü/Don" to="." method="_on_don_pressed"]
 [connection signal="toggled" from="CanvasLayer/Panel/menü/Label/ses" to="." method="_on_check_box_toggled"]
