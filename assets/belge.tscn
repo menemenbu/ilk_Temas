@@ -1,136 +1,41 @@
 [gd_scene format=3 uid="uid://dovd3ksi68ta0"]
 
-[ext_resource type="Texture2D" uid="uid://c7qeoxd7lgdw1" path="res://assets/yeni rapor belgesi (16x).png" id="1_g3pxc"]
+[ext_resource type="Script" uid="uid://2c034kakvh4b" path="res://scripts/menu.gd" id="1_j2bh7"]
+[ext_resource type="Theme" uid="uid://dc6tye45d6aap" path="res://assets/Ubutton.tres" id="2_tokyi"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_g3pxc"]
-font_size = 28
-font_color = Color(0, 0, 0, 1)
+[sub_resource type="LabelSettings" id="LabelSettings_bc7to"]
+font_size = 60
 
-[node name="Node2D" type="Node2D" unique_id=1136850238]
+[node name="Menu" type="Node2D" unique_id=767815300]
+script = ExtResource("1_j2bh7")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1767436657]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=771720810]
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1049772165]
-position = Vector2(560, 312)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_g3pxc")
+[node name="çıkış" type="Button" parent="CanvasLayer" unique_id=1802247874]
+offset_left = 448.0
+offset_top = 416.0
+offset_right = 704.0
+offset_bottom = 496.0
+theme = ExtResource("2_tokyi")
+theme_override_font_sizes/font_size = 32
+text = "ÇIKIŞ"
 
-[node name="Label" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1954628147]
-offset_left = -540.0
-offset_top = -303.33334
-offset_right = -86.666626
-offset_bottom = -223.33334
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
+[node name="Başla" type="Button" parent="CanvasLayer" unique_id=57719024]
+offset_left = 448.0
+offset_top = 304.0
+offset_right = 704.0
+offset_bottom = 384.0
+theme = ExtResource("2_tokyi")
+theme_override_font_sizes/font_size = 32
+text = "BAŞLA"
 
-[node name="Label15" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1479402213]
-offset_left = -603.3333
-offset_top = -850.0
-offset_right = 559.99994
-offset_bottom = -636.6666
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
-
-[node name="Label3" type="Label" parent="CanvasLayer/Sprite2D" unique_id=337002961]
-offset_left = 99.99999
-offset_top = -306.6667
-offset_right = 553.3333
-offset_bottom = -226.66669
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
-
-[node name="Label4" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1433615624]
-offset_left = 96.66666
-offset_top = -176.66669
-offset_right = 550.0
-offset_bottom = -96.66669
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
-
-[node name="Label5" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1128168390]
-offset_left = 93.33332
-offset_top = -46.666687
-offset_right = 546.6667
-offset_bottom = 33.333313
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
-
-[node name="Label6" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1184361481]
-offset_left = -536.6667
-offset_top = -46.666687
-offset_right = -83.33331
-offset_bottom = 33.333313
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
-
-[node name="Label7" type="Label" parent="CanvasLayer/Sprite2D" unique_id=51140592]
-offset_left = -540.0
-offset_top = -176.66669
-offset_right = -86.666626
-offset_bottom = -96.66669
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
-
-[node name="Label8" type="Label" parent="CanvasLayer/Sprite2D" unique_id=878025090]
-offset_left = -543.3333
-offset_top = 203.33331
-offset_right = -89.99994
-offset_bottom = 283.3333
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
-
-[node name="Label11" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1788596528]
-offset_left = 96.66669
-offset_top = 206.66664
-offset_right = 550.00006
-offset_bottom = 286.66663
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
-
-[node name="Label12" type="Label" parent="CanvasLayer/Sprite2D" unique_id=223479]
-offset_left = 100.00002
-offset_top = 333.3333
-offset_right = 553.3334
-offset_bottom = 413.3333
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
-
-[node name="Label13" type="Label" parent="CanvasLayer/Sprite2D" unique_id=996127308]
-offset_left = 90.00002
-offset_top = 463.3333
-offset_right = 543.3334
-offset_bottom = 543.3333
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
-
-[node name="Label14" type="Label" parent="CanvasLayer/Sprite2D" unique_id=893043248]
-offset_left = -606.6666
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1707603520]
+offset_left = 256.0
 offset_top = 80.0
-offset_right = 556.6666
-offset_bottom = 160.0
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
+offset_right = 897.0
+offset_bottom = 163.0
+text = "İLK TEMAS: AY GÖREVİ"
+label_settings = SubResource("LabelSettings_bc7to")
 
-[node name="Label9" type="Label" parent="CanvasLayer/Sprite2D" unique_id=992435429]
-offset_left = -546.6666
-offset_top = 336.66663
-offset_right = -93.33325
-offset_bottom = 416.66663
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
-
-[node name="Label10" type="Label" parent="CanvasLayer/Sprite2D" unique_id=2129144439]
-offset_left = -549.99994
-offset_top = 466.66663
-offset_right = -96.666565
-offset_bottom = 546.6666
-text = "ghffgfgfhghyjfgh"
-label_settings = SubResource("LabelSettings_g3pxc")
-
-[node name="Label2" type="Label" parent="CanvasLayer/Sprite2D" unique_id=396833034]
-offset_left = -606.6667
-offset_top = -496.6667
-offset_right = 559.9998
-offset_bottom = -416.6667
-text = "ghffg"
-label_settings = SubResource("LabelSettings_g3pxc")
+[connection signal="pressed" from="CanvasLayer/çıkış" to="." method="_on_çıkış_pressed"]
+[connection signal="pressed" from="CanvasLayer/Başla" to="." method="_on_başla_pressed"]

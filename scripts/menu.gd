@@ -4,12 +4,12 @@ func _ready() -> void:pass
 #	print(Hikaye.mesaj1.length())
 
 func _on_başla_pressed() -> void:
-	ResourceLoader.load_threaded_request("res://oyun.tscn")
+	ResourceLoader.load_threaded_request("res://intro.tscn")
 
 func _process(_delta):
-	var durum = ResourceLoader.load_threaded_get_status("res://oyun.tscn")
+	var durum = ResourceLoader.load_threaded_get_status("res://intro.tscn")
 	if durum == ResourceLoader.THREAD_LOAD_LOADED:
-		var sahne = ResourceLoader.load_threaded_get("res://oyun.tscn")
+		var sahne = ResourceLoader.load_threaded_get("res://intro.tscn")
 		get_tree().change_scene_to_packed(sahne)
 
 

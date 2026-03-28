@@ -92,6 +92,7 @@ offset_bottom = 416.0
 flat = true
 
 [node name="Panel2" type="Panel" parent="CanvasLayer" unique_id=1356260870]
+visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_rkro4")

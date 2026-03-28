@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://t5j6561kjf2v"]
+
+[ext_resource type="Script" uid="uid://goenm2s5lo86" path="res://scripts/intro.gd" id="1_0a7ni"]
+[ext_resource type="AudioStream" uid="uid://d18ljrm4l33kr" path="res://assets/dragon-studio-keyboard-typing-asmr-356118.mp3" id="2_y72e6"]
+[ext_resource type="Texture2D" uid="uid://di2y555toorov" path="res://assets/Roket İntro.png" id="3_u2rf6"]
+[ext_resource type="Theme" uid="uid://tn3a3hpjmw1u" path="res://assets/buton.tres" id="4_y6ycx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0a7ni"]
+font_size = 30
+
+[node name="Node2D" type="Node2D" unique_id=2135454016]
+script = ExtResource("1_0a7ni")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1477324323]
+stream = ExtResource("2_y72e6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=429024030]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1813853850]
+position = Vector2(576, 324)
+scale = Vector2(1.125, 1.265625)
+texture = ExtResource("3_u2rf6")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Sprite2D" unique_id=1087384233]
+offset_left = -341.33334
+offset_top = 135.90125
+offset_right = 341.33328
+offset_bottom = 243.35803
+
+[node name="Label" type="Label" parent="CanvasLayer/Sprite2D/Panel" unique_id=1246350306]
+layout_mode = 0
+offset_left = 14.222222
+offset_top = 12.641975
+offset_right = 668.4445
+offset_bottom = 101.13581
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="CanvasLayer/Sprite2D/Panel" unique_id=734773017]
+layout_mode = 0
+offset_left = 611.5556
+offset_top = 75.85185
+offset_right = 682.6666
+offset_bottom = 107.45677
+focus_mode = 0
+theme = ExtResource("4_y6ycx")
+
+[node name="Label" type="Label" parent="CanvasLayer/Sprite2D/Panel/Button" unique_id=374809707]
+layout_mode = 0
+offset_left = 9.777723
+offset_top = 0.79012346
+offset_right = 62.777725
+offset_bottom = 23.790123
+text = "devam"
+
+[node name="dönüş" type="Panel" parent="CanvasLayer" unique_id=1920583501]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="CanvasLayer/dönüş" unique_id=624626755]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 552.0
+offset_right = 1248.0
+offset_bottom = 640.0
+text = "YÜKLENİYOR..."
+label_settings = SubResource("LabelSettings_0a7ni")
+
+[connection signal="pressed" from="CanvasLayer/Sprite2D/Panel/Button" to="." method="_on_button_pressed"]
