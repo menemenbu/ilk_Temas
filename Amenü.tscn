@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://2c034kakvh4b" path="res://scripts/menu.gd" id="1_62iig"]
 [ext_resource type="Texture2D" uid="uid://b2c0s4wbxww33" path="res://assets/strart ekranı.png" id="2_bc7to"]
 [ext_resource type="Theme" uid="uid://dc6tye45d6aap" path="res://assets/Ubutton.tres" id="2_cc20m"]
+[ext_resource type="AudioStream" uid="uid://blxuvyf2oc03k" path="res://assets/mat-brook-x-dreamable-love-therapy-made-with-Voicemod.mp3" id="2_dvjwi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bc7to"]
 font_size = 60
@@ -11,6 +12,10 @@ outline_color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Node2D" unique_id=767815300]
 script = ExtResource("1_62iig")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1261144123]
+stream = ExtResource("2_dvjwi")
+autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=771720810]
 
@@ -26,6 +31,7 @@ offset_bottom = 496.0
 theme = ExtResource("2_cc20m")
 theme_override_font_sizes/font_size = 32
 text = "ÇIKIŞ"
+metadata/_edit_use_anchors_ = true
 
 [node name="Başla" type="Button" parent="CanvasLayer" unique_id=57719024]
 offset_left = 448.0
@@ -35,6 +41,7 @@ offset_bottom = 384.0
 theme = ExtResource("2_cc20m")
 theme_override_font_sizes/font_size = 32
 text = "BAŞLA"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1707603520]
 offset_left = 256.0
@@ -43,6 +50,7 @@ offset_right = 897.0
 offset_bottom = 163.0
 text = "İLK TEMAS: AY GÖREVİ"
 label_settings = SubResource("LabelSettings_bc7to")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer/çıkış" to="." method="_on_çıkış_pressed"]
 [connection signal="pressed" from="CanvasLayer/Başla" to="." method="_on_başla_pressed"]

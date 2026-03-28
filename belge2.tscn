@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://doi0bf2kuabb3"]
 
 [ext_resource type="Texture2D" uid="uid://div1p1d3kia1h" path="res://assets/en marşinal rapor belgesi(8x).png" id="1_56ew5"]
+[ext_resource type="Script" uid="uid://cj67n4g7k37qk" path="res://belge_2.gd" id="1_nmteo"]
 [ext_resource type="LabelSettings" uid="uid://bxwxb0qceolwo" path="res://assets/belge.tres" id="2_nmteo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kjrgf"]
@@ -20,12 +21,13 @@ line_spacing = -4.73
 font_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D" unique_id=198855228]
+script = ExtResource("1_nmteo")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=958116607]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1438644862]
-position = Vector2(576, 320)
-scale = Vector2(0.6, 0.6)
+position = Vector2(800, 309.6)
+scale = Vector2(0.6, 0.6046875)
 texture = ExtResource("1_56ew5")
 
 [node name="Label" type="Label" parent="CanvasLayer/Sprite2D" unique_id=2051308323]

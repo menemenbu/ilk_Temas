@@ -8,6 +8,8 @@
 [ext_resource type="Theme" uid="uid://tn3a3hpjmw1u" path="res://assets/buton.tres" id="4_j06mm"]
 [ext_resource type="Texture2D" uid="uid://bnf1c3ca3772w" path="res://assets/Ayarlar menüsü.png" id="7_ljdso"]
 [ext_resource type="Texture2D" uid="uid://ghigo6ygru25" path="res://assets/kapama butonu.png" id="7_xdbvi"]
+[ext_resource type="PackedScene" uid="uid://braolqbowup43" path="res://belge1.tscn" id="8_rkro4"]
+[ext_resource type="PackedScene" uid="uid://doi0bf2kuabb3" path="res://belge2.tscn" id="9_df4xg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cnnjj"]
 texture = ExtResource("2_oe8mv")
@@ -38,6 +40,26 @@ region_rect = Rect2(304, 800, 400, 256)
 texture = ExtResource("7_xdbvi")
 region_rect = Rect2(304, 800, 400, 256)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f6g8a"]
+texture = ExtResource("7_xdbvi")
+region_rect = Rect2(304, 528, 400, 256)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u2omv"]
+texture = ExtResource("7_xdbvi")
+region_rect = Rect2(304, 800, 400, 256)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_toqho"]
+texture = ExtResource("7_xdbvi")
+region_rect = Rect2(304, 528, 400, 256)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q3mrl"]
+texture = ExtResource("7_xdbvi")
+region_rect = Rect2(304, 528, 400, 256)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p8mkq"]
+texture = ExtResource("7_xdbvi")
+region_rect = Rect2(304, 528, 400, 256)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d62lu"]
 bg_color = Color(0, 0, 0, 0.1764706)
 
@@ -54,11 +76,14 @@ font_size = 30
 [node name="Oyun" type="Node2D" unique_id=56076303]
 script = ExtResource("1_d62lu")
 
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="." unique_id=1932772049]
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=869773031]
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1903967044]
 stream = ExtResource("2_cnnjj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2018477852]
-layer = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=770168232]
 position = Vector2(576.00006, 324)
@@ -107,7 +132,6 @@ offset_bottom = 416.0
 flat = true
 
 [node name="Panel2" type="Panel" parent="CanvasLayer" unique_id=1356260870]
-visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_rkro4")
@@ -165,24 +189,27 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_df4xg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ka572")
 
 [node name="Panel3" type="Panel" parent="CanvasLayer" unique_id=934952580]
+visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="değiştir" type="Button" parent="CanvasLayer/Panel3" unique_id=1062530755]
+[node name="kapat" type="Button" parent="CanvasLayer/Panel3" unique_id=801806661]
 layout_mode = 0
-offset_left = 968.0
+offset_left = 992.0
 offset_top = 544.0
 offset_right = 1128.0
 offset_bottom = 624.0
-text = "değiştir"
+theme_override_styles/normal = SubResource("StyleBoxTexture_f6g8a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_u2omv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_toqho")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_q3mrl")
+theme_override_styles/focus = SubResource("StyleBoxTexture_p8mkq")
 
-[node name="kapat" type="Button" parent="CanvasLayer/Panel3" unique_id=801806661]
-layout_mode = 0
-offset_left = 968.0
-offset_top = 440.0
-offset_right = 1128.0
-offset_bottom = 520.0
-text = "kapat"
+[node name="Node2D" parent="CanvasLayer/Panel3" unique_id=652631956 instance=ExtResource("8_rkro4")]
+visible = false
+
+[node name="Node2D2" parent="CanvasLayer/Panel3" unique_id=198855228 instance=ExtResource("9_df4xg")]
+visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=879897060]
 visible = false
@@ -255,7 +282,6 @@ label_settings = SubResource("LabelSettings_rkro4")
 [connection signal="pressed" from="CanvasLayer/Panel2/mesaj/cevap2" to="." method="_on_cevap_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel2/mesaj/devam" to="." method="_on_devam_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel2/mesaj/kapa" to="." method="_on_kapa_pressed"]
-[connection signal="pressed" from="CanvasLayer/Panel3/değiştir" to="." method="_on_değiştir_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel3/kapat" to="." method="_on_kapat_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/menü/Devam et" to="." method="_on_devam_et_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/menü/Don" to="." method="_on_don_pressed"]

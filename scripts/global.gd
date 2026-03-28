@@ -1,5 +1,7 @@
 extends Node
 
+var motorS = ""
+var YDÜS = ""
 
 
 func fullscreen():

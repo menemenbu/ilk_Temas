@@ -1,11 +1,10 @@
 extends Node2D
 
-var Cbit
 var MesajS = 0
 var yazılan
 var yaz=true
-var belgetscn
-var belgetscn2
+var belgetscn = load("res://belge1.tscn").instantiate()
+var belgetscn2= load("res://belge2.tscn").instantiate()
 var Abelge
 
 func okuma():
@@ -61,15 +60,18 @@ func _process(_delta) -> void:
 		var sahne = ResourceLoader.load_threaded_get("res://Amenü.tscn")
 		get_tree().change_scene_to_packed(sahne)
 	
-	if Cbit == true:
-		mesajcı(Hikaye.yazı)
-		Cbit = false
-		await get_tree().create_timer(5).timeout
-	
-	
+
 
 
 func _on_ekran_pressed() -> void:
+	var ilk=true
+	if ilk:
+		mesajcı(Hikaye.mesaj8)
+	if MesajS==1:
+		mesajcı(Hikaye.mesaj01)
+		$CanvasLayer/Panel2/mesaj/cevap1.text="Sıvı Yakıtlı"
+		$CanvasLayer/Panel2/mesaj/cevap2.text="İyon"
+		$CanvasLayer/Panel2/mesaj/devam.text="Katı Yakıtlı"
 	$"CanvasLayer/ekran_mesajı".visible=false
 	$CanvasLayer/Panel2.visible=true
 
@@ -83,38 +85,31 @@ func _on_kapa_pressed() -> void:
 
 
 func _on_ekran_2_pressed() -> void:
-	belgetscn = load("res://belge1.tscn").instantiate()
-	add_child(belgetscn)
-	Abelge=1
-	
-	#belgetscn.queue_free()
+	$CanvasLayer.layer=0
 	$"CanvasLayer/ekran_mesajı2".visible=false
 	$CanvasLayer/Panel3.visible=true
 
 
 func _on_devam_pressed() -> void:
-	pass
+	#MesajS+=1
+	$CanvasLayer/Panel2/mesaj/mesajI.text=""
+	$CanvasLayer/Panel2.visible=false
+	if MesajS==1:
+		Global.motorS="Katı"
 
 func _on_cevap_1_pressed() -> void:
-	pass # Replace with function body.
+	$CanvasLayer/Panel2/mesaj/mesajI.text=""
+	$CanvasLayer/Panel2.visible=false
+	if MesajS==1:
+		Global.motorS="Sıvı"
 
-func _on_cevap_2_pressed() -> void:pass
-	#$CanvasLayer/Panel2/mesaj/mesajI.text=""
-	#mesajcı(Hikaye.mesaj1)
-
-
-func _on_değiştir_pressed() -> void:
-	if Abelge == 1:
-		belgetscn2 = load("res://belge2.tscn").instantiate()
-		belgetscn.queue_free()
-		add_child(belgetscn2)
-	else:
-		belgetscn = load("res://belge1.tscn").instantiate()
-		belgetscn2.queue_free()
-		add_child(belgetscn)
+func _on_cevap_2_pressed() -> void:
+	$CanvasLayer/Panel2/mesaj/mesajI.text=""
+	$CanvasLayer/Panel2.visible=false
+	if MesajS==1:
+		Global.motorS="iyon"
 
 
 func _on_kapat_pressed() -> void:
-	belgetscn2.queue_free()
-	belgetscn.queue_free()
+	$CanvasLayer.layer=1
 	$CanvasLayer/Panel3.visible=false

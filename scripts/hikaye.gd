@@ -12,9 +12,6 @@ var mesaj6= "Bu durumdan geri kalmak istemeyen ABD(Amerika Birleşik Devletleri)
 var mesaj7= "Tabiki gördüğümüz bu keşif görevleri bize yarar sağlasada bi süre sonra kullanımdan çıkmış Sputnik 1 gibi uyduların uzayı kirlettiğini ve yavaş yavaş dünya etrafında bir çöp yığını oluşmaya başladığı görülmektedir."
 var mesaj8= "Selam,yıllar sonra uzay ajansında işini yeniden kazandın,gerçekten çok şanslı olmalısın. Neyse sen yokken burda bazı  şeyler değişti. Yeni kuralları öğrenmenin vakti geldi diye düşünüyorum."
 
-#(hikaye)
-
-#Selam,yıllar sonra uzay ajansında işini yeniden kazandın,gerçekten çok şanslı olmalısın.
-#Neyse sen yokken burda bazı  şeyler değişti.Yeni kuralları öğrenmenin vakti geldi diye düşünüyorum.
-#
-#
+var mesaj01= "sorun1: aya çıkacak astronot takımının kullanacağı itki sistemine karar vermelisin. bu sistem aya gitme ve dönme kapasitesine sahip olmalı. Yanlış bir seçim durumun mürettebatın başarısızlığı ile sonuçlanabilir. 3 farklı motor seçeneği hangisi bizi aya ulaştırabilir."
+var mesaj03= "Bir uzay görevi sırasında astronotlar, uzay aracının dışında kritik bir onarım yapmak zorunda kalır. Ancak bu sırada beklenmedik bir güneş radyasyonu dalgası yaklaşmaktadır ve görev süresi sınırlıdır. Ayrıca aracın bazı yaşam destek sistemleri hasar görmüş, oksijen ve enerji kaynakları kısıtlı hale gelmiştir. Astronotlar yalnızca tek bir uzay giysisini aktif olarak kullanabilecek durumdadır. Seçilecek giysi, hem astronotu korumalı hem de sınırlı kaynaklarla maksimum verim sağlamalıdır. Bu koşullar altında hangi uzay giysisini seçersiniz?"
+var mesaj02= "Roket havalanıyor..."
