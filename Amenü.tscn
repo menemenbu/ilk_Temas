@@ -13,9 +13,9 @@ script = ExtResource("1_62iig")
 
 [node name="çıkış" type="Button" parent="CanvasLayer" unique_id=1802247874]
 offset_left = 448.0
-offset_top = 408.0
+offset_top = 416.0
 offset_right = 704.0
-offset_bottom = 488.0
+offset_bottom = 496.0
 theme = ExtResource("2_cc20m")
 theme_override_font_sizes/font_size = 32
 text = "ÇIKIŞ"
@@ -31,9 +31,9 @@ text = "BAŞLA"
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1707603520]
 offset_left = 256.0
-offset_top = 64.0
+offset_top = 80.0
 offset_right = 897.0
-offset_bottom = 147.0
+offset_bottom = 163.0
 text = "İLK TEMAS: AY GÖREVİ"
 label_settings = SubResource("LabelSettings_bc7to")
 
