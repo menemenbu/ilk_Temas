@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://ghigo6ygru25" path="res://assets/kapama butonu.png" id="7_xdbvi"]
 [ext_resource type="PackedScene" uid="uid://braolqbowup43" path="res://belge1.tscn" id="8_rkro4"]
 [ext_resource type="PackedScene" uid="uid://doi0bf2kuabb3" path="res://belge2.tscn" id="9_df4xg"]
+[ext_resource type="Texture2D" uid="uid://637nsysapdq4" path="res://assets/yeni iyi son (8x).png" id="12_u2omv"]
+[ext_resource type="Texture2D" uid="uid://tkoodatgme7o" path="res://assets/yeni kötü son (8x).png" id="13_toqho"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cnnjj"]
 texture = ExtResource("2_oe8mv")
@@ -40,6 +42,18 @@ region_rect = Rect2(304, 800, 400, 256)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ka572"]
 texture = ExtResource("7_xdbvi")
 region_rect = Rect2(304, 800, 400, 256)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0o567"]
+texture = ExtResource("7_xdbvi")
+region_rect = Rect2(304, 528, 400, 256)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bbh6r"]
+texture = ExtResource("7_xdbvi")
+region_rect = Rect2(304, 528, 400, 256)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_woc0u"]
+texture = ExtResource("7_xdbvi")
+region_rect = Rect2(304, 528, 400, 256)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f6g8a"]
 texture = ExtResource("7_xdbvi")
@@ -74,6 +88,11 @@ font_size = 31
 [sub_resource type="LabelSettings" id="LabelSettings_rkro4"]
 font_size = 30
 
+[sub_resource type="LabelSettings" id="LabelSettings_u2omv"]
+font_size = 30
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Oyun" type="Node2D" unique_id=56076303]
 script = ExtResource("1_d62lu")
 
@@ -104,9 +123,10 @@ theme_override_styles/focus = SubResource("StyleBoxTexture_ljdso")
 [node name="ekran_mesajı" type="Label" parent="CanvasLayer" unique_id=1155080081]
 offset_left = 848.0
 offset_top = 216.0
-offset_right = 1040.0
-offset_bottom = 256.0
-text = "<---- bu monitöre tıkla"
+offset_right = 1080.0
+offset_bottom = 291.0
+text = "<---- bu monitörde mesajları 
+        kontrol et"
 autowrap_mode = 3
 
 [node name="ekran_mesajı2" type="Label" parent="CanvasLayer" unique_id=1410085903]
@@ -132,6 +152,7 @@ offset_bottom = 416.0
 flat = true
 
 [node name="Panel2" type="Panel" parent="CanvasLayer" unique_id=1356260870]
+visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_rkro4")
@@ -185,8 +206,12 @@ offset_left = 624.0
 offset_top = 24.0
 offset_right = 688.0
 offset_bottom = 64.0
+focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_df4xg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ka572")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0o567")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_bbh6r")
+theme_override_styles/focus = SubResource("StyleBoxTexture_woc0u")
 
 [node name="Panel3" type="Panel" parent="CanvasLayer" unique_id=934952580]
 visible = false
@@ -274,6 +299,50 @@ offset_right = 1248.0
 offset_bottom = 640.0
 text = "YÜKLENİYOR..."
 label_settings = SubResource("LabelSettings_rkro4")
+
+[node name="iyiS" type="Sprite2D" parent="CanvasLayer" unique_id=1904753727]
+visible = false
+position = Vector2(576, 324.00003)
+scale = Vector2(0.49999997, 0.50000006)
+texture = ExtResource("12_u2omv")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/iyiS" unique_id=1321870599]
+offset_left = -512.00006
+offset_top = 279.9999
+offset_right = 512.0002
+offset_bottom = 535.9999
+
+[node name="Label" type="Label" parent="CanvasLayer/iyiS/Panel" unique_id=1483059813]
+layout_mode = 0
+offset_left = 16.000004
+offset_top = 31.999998
+offset_right = 1008.0002
+offset_bottom = 239.99994
+text = "Verdiğin kararlarla kontrolündeki uzay mekiği Ay'a sağ salim ulaştı. Oradaki merkez üsten parçaları yeniledi ve dünyaya dönmeye hazır. Bu tarz bi panik durumunda en iyi kararları verdiğin için terfi aldın ve halk içinde kahraman olarak anılmaya başladın."
+label_settings = SubResource("LabelSettings_u2omv")
+autowrap_mode = 3
+
+[node name="kötüS" type="Sprite2D" parent="CanvasLayer" unique_id=1870476592]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_toqho")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/kötüS" unique_id=1307162086]
+offset_left = -512.00006
+offset_top = 279.9999
+offset_right = 512.0002
+offset_bottom = 535.9999
+
+[node name="Label" type="Label" parent="CanvasLayer/kötüS/Panel" unique_id=259878550]
+layout_mode = 0
+offset_left = 16.000004
+offset_top = 31.999998
+offset_right = 1008.0002
+offset_bottom = 239.99994
+text = "Verdiğin kararlar yüzünden kontrolündeki uzay mekiği ağır hasar aldı ve astronotlar başarısız oldu. Bu tarz çapı büyük bir faciada başrol oynadığın için işten atıldın ve halk içerisindeki itibarın zedelendi."
+label_settings = SubResource("LabelSettings_u2omv")
+autowrap_mode = 3
 
 [connection signal="pressed" from="CanvasLayer/menü" to="." method="_on_menü_pressed"]
 [connection signal="pressed" from="CanvasLayer/ekran" to="." method="_on_ekran_pressed"]
